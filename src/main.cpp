@@ -2,8 +2,7 @@
 #include <memory>
 
 int main(){
-    shared_ptr<snake::game> one_game = make_shared<snake::game>();
-    one_game->start();
-    while(one_game->run()){}
+    std::shared_ptr<snake::game> one_game = std::make_shared<snake::game>();
+    one_game->run();
 }
 
