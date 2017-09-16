@@ -9,6 +9,7 @@ namespace snake{
 
 class window{
     public:
+        window(){init();}
         void run();
         void join();
     private:
@@ -18,7 +19,7 @@ class window{
 };
 
 void window::run(){
-    this->init();
+    //this->init();
     pthread_create(&num,NULL,clock,NULL);
 }
 

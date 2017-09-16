@@ -2,7 +2,6 @@
 #define GAME_H
 #include "src/snake.hpp"
 #include "src/window.hpp"
-#include "src/apple.hpp"
 #include "src/boomer.hpp"
 #include "src/monitor.hpp"
 #include "src/template.hpp"
@@ -18,7 +17,6 @@ class game{
     public:
         typedef std::shared_ptr<snake> ptr_snake;
         typedef std::shared_ptr<window> ptr_window;
-        typedef std::shared_ptr<apple> ptr_apple;
         game();
         int run();
 
@@ -26,7 +24,6 @@ class game{
             void initial(T& tmp);
     private:
         ptr_snake one_snake;
-        ptr_apple one_apple;
         //shared_ptr<boomer> many_boomer;
         //shared_ptr<monitor> one_monitor;
         ptr_window one_window;
@@ -49,7 +46,6 @@ game::game(){
     mask_sig();
     initial(one_window);
     initial(one_snake);
-    initial(one_apple);
     //initial(many_boomer);
     //initial(one_monitor);
 }

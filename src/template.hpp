@@ -1,11 +1,11 @@
 #ifndef TEMPLATE_H
 #define TEMPLATE_H
 #include <memory>
-#include "src/snake.hpp"
-#include "src/apple.hpp"
 
 namespace snake{
 
+class snake;
+class apple;
 template <typename T>
 class initial_trait{//trait出shared_ptr的原有类型
     public:
@@ -18,11 +18,11 @@ class initial_trait<std::shared_ptr<snake>>{
         typedef snake value;
 };
 
-//template <>
-//class initial_trait<std::shared_ptr<apple>>{
-//    public:
-//        typedef apple value;
-//};
+template <>
+class initial_trait<std::shared_ptr<apple>>{
+    public:
+        typedef apple value;
+};
 
 struct score_t{
     int _value;
